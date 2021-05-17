@@ -1,0 +1,35 @@
+<!-- <h3>{{ product.title }}</h3>
+<figure>
+    <img [src]="product.image" width="100px" [alt]="product.image">
+</figure>
+<p>Price <small>{{ product.price}}</small></p>
+<small>{{ product.description }}</small>
+
+<button (click)="addCart(product.id)">Agregar</button> -->
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>{{ product.price | number}}</mat-card-subtitle>
+        <div>
+            <button (click)="add()" color="accent" mat-mini-fab>
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </mat-card-header>
+
+    <img mat-card-image [src]="product.image" alt="Photo of a Shiba Inu">
+
+    <mat-card-content>
+        <p>
+            {{ product.description}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button [routerLink]="['/product',product.id]" mat-raised-button color="primary">
+            Detail
+        </button>
+    </mat-card-actions>
+
+</mat-card>

@@ -1,0 +1,42 @@
+<mat-drawer-container class="sidenav-container" fullsreen>
+
+    <mat-drawer mode="side" bacd class="sidenav" #sidenav>
+        <mat-toolbar class="mat-toolbar" color="primary">
+            Menu
+        </mat-toolbar>
+
+        <mat-nav-list class="list">
+            <a routerLink="/admin/form" mat-list-item>
+                <mat-icon mat-list-icon>create</mat-icon>
+                <span>Crear</span>
+            </a>
+            <a routerLink="/admin/products" mat-list-item>
+                <mat-icon mat-list-icon>inventory_2</mat-icon>
+                Productos
+            </a>
+            <a mat-list-item>
+                Dashboard
+                <mat-icon mat-list-icon>space_dashboard</mat-icon>
+            </a>
+        </mat-nav-list>
+
+    </mat-drawer>
+
+    <mat-toolbar color="primary">
+        <button (click)="sidenav.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="spacer"></div>
+        <button mat-button>
+            Login
+        </button>
+        <button (click)="logout()" mat-button>
+            Logout
+        </button>
+    </mat-toolbar>
+
+    <div class="container-admin">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>

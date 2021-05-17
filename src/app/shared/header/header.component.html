@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <div class="wrapper">
+
+        <mat-toolbar color="primary">
+            <img src="./favicon.ico" alt="adf">
+            <span class="example-spacer"></span>
+
+            <button routerLink="/home" mat-button>Home</button>
+            <button routerLink="/contacto" mat-button>Contacto</button>
+            <button routerLink="/product/products" mat-button>Productos</button>
+
+            <button routerLink="/pedido" [matBadge]="lengthCart | async" matBadgeColor="warn" mat-raised-button
+                    class="example-icon"
+                    aria-label="Example icon-button with menu icon">
+                <mat-icon>shopping_cart</mat-icon>
+                Carrito
+            </button>
+        </mat-toolbar>
+
+    </div>
+</mat-toolbar>

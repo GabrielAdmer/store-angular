@@ -1,0 +1,6 @@
+<div class="products-card mt-5">
+
+    <app-product (onCart)="addCart( $event )" class="product-card" *ngFor="let product of products" [product]="product">
+    </app-product>
+
+</div>

@@ -1,0 +1,29 @@
+@import "/src/styles.scss";
+
+.footer {
+    background-color: #3f51b5;
+    height: 100px;
+    margin-top: 15px;
+    color: white;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px;
+    @include max-width(1200px);
+}
+
+.wrapper > p {
+    justify-self: center;
+    align-self: center;
+}
+
+.footer-numero {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-top: 10px;
+}

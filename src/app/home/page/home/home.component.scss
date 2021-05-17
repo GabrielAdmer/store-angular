@@ -1,0 +1,68 @@
+.backdrops {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background-color: #999;
+
+    .backdrop {
+        height: 350px;
+        width: 100%;
+
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .spinner {
+        margin: auto auto;
+    }
+}
+
+.divider {
+    margin: 24px 0;
+}
+
+.edit-backdrops {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .edit-backdrop {
+        padding: 12px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-flow: column;
+
+        > :nth-child(2) {
+            margin-top: 16px;
+        }
+    }
+}
+
+.monitor {
+    width: 50%;
+    margin: auto auto;
+    height: 500px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #777;
+    padding: 32px;
+    border-radius: 4px;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.custom-arrow-left {
+        left: 2.5%;
+    }
+
+    &.custom-arrow-right {
+        right: 2.5%;
+    }
+}

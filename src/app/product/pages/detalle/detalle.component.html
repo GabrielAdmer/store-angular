@@ -1,0 +1,9 @@
+<div *ngIf="!product; else card">
+    ...cargando
+</div>
+
+<ng-template #card>
+    <div>
+        {{ product.title}}
+    </div>
+</ng-template>
